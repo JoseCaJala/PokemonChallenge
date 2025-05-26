@@ -1,6 +1,6 @@
 # PokeChallenge
 
-This is a base project to practice **Atomic Design** architecture using React and data from the PokéAPI.
+This is a base project to practice **Atomic Design** architecture using React and data from the PokéAPI (soon).
 
 ---
 
@@ -27,4 +27,4 @@ npm install
 
 ```bash
 npm run dev
-``
+```
