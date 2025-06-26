@@ -1,41 +1,17 @@
-import Typography from "../atoms/Typhopgraphy";
-import Badge from "../atoms/Badge";
-//import "./PokemonInfo.scss";
+import styles from './InfoPoke.module.css';
+import Text from '../../components/atoms/Text';
+import Badge from '../../components/atoms/Badge';
 
-function PokemonInfo({ name, number, types }) {
+export default function PokemonInfo({ number, name, types }) {
   return (
-    <div className="pokemon-info">
-      <Typography 
-        variant="number" 
-        size="small" 
-        color="muted"
-        className="pokemon-info__number"
-      >
-        #{String(number).padStart(3, '0')}
-      </Typography>
-      
-      <Typography 
-        variant="title" 
-        size="xlarge" 
-        color="white"
-        weight="bold"
-        className="pokemon-info__name"
-      >
-        {name}
-      </Typography>
-      
-      <div className="pokemon-info__types">
-        {types.map((type, idx) => (
-          <Badge 
-            key={idx} 
-            label={type.label} 
-            color={type.color} 
-            size="medium"
-          />
+    <div className={styles.info}>
+      <Text type="subtitle">#{number.toString().padStart(3, '0')}</Text>
+      <Text type="title">{name}</Text>
+      <div className={styles.badges}>
+        {types.map((type) => (
+          <Badge key={type} type={type} />
         ))}
       </div>
     </div>
   );
 }
-
-export default PokemonInfo;

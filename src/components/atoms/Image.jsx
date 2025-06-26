@@ -1,19 +1,5 @@
-//import "./Image.scss";
+import styles from "./Image.module.css";
 
-function Image({ 
-  src, 
-  alt, 
-  size = "medium",
-  rounded = false,
-  className = "" 
-}) {
-  return (
-    <img 
-      src={src} 
-      alt={alt}
-      className={`image image--${size} ${rounded ? 'image--rounded' : ''} ${className}`}
-    />
-  );
+export default function Image({ src, alt }) {
+  return <img className={styles.image} src={src} alt={alt} />;
 }
-
-export default Image;

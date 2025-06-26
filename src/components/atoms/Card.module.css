@@ -1,0 +1,33 @@
+.card {
+  position: relative;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 80px;
+  height: 80px;
+  background-image: url("../../assets/6x3.svg");
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 120px;
+  height: 120px;
+  background-image: url("../../assets/Pokeball.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  z-index: 0;
+}

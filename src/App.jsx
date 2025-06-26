@@ -1,33 +1,24 @@
-import { useState } from 'react'
+import { useEffect, useState } from "react";
 import PokemonCard from "./components/organisms/PokemonCard";
-import './App.css'
 
 function App() {
+  const [pokemon, setPokemon] = useState(null);
+
+  useEffect(() => {
+    async function fetchPokemon() {
+      const response = await fetch("https://pokeapi.co/api/v2/pokemon/bulbasaur");
+      const data = await response.json();
+      setPokemon(data);
+    }
+
+    fetchPokemon();
+  }, []);
+
   return (
-    <div className='app-container'>
-      <PokemonCard
-        id={1}
-        name="Bulbasaur"
-        image="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
-        backgroundColor="#78c850" // Verde para Grass type
-        types={[
-          { label: 'Grass', color: 'grass' },
-          { label: 'Poison', color: 'poison' }
-        ]}
-      />
-      
-      {/* Ejemplo con otro Pokémon */}
-      <PokemonCard
-        id={4}
-        name="Charmander"
-        image="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
-        backgroundColor="#f08030" // Naranja para Fire type
-        types={[
-          { label: 'Fire', color: 'fire' }
-        ]}
-      />
+    <div style={{ padding: "2rem", display: "flex", justifyContent: "center" }}>
+      {pokemon && <PokemonCard pokemon={pokemon} />}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
