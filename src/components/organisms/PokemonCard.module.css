@@ -12,7 +12,22 @@
 
 .content {
   display: flex;
+  height: 100%;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image img {
+  height: 100px;
+  object-fit: contain;
 }

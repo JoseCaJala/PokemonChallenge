@@ -1,8 +1,11 @@
+import Layout from "./components/template/Layout";
 import PokemonList from "./components/organisms/PokemonList";
 
 function App() {
   return (
-    <PokemonList/>
+    <Layout>
+      <PokemonList />
+    </Layout>
   );
 }
 
