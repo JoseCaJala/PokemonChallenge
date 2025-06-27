@@ -1,9 +1,9 @@
 import styles from "./Card.module.css";
 
-export default function Card({ type }) {
+export default function Card({ type, children }) {
   return (
-    <div className={`${styles.card} ${type.toLowerCase()}`}>
-      {}
-    </div>
+    <article className={`${styles.card} bg-${type.toLowerCase()}`}>
+      {children}
+    </article>
   );
 }

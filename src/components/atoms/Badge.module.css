@@ -1,17 +1,18 @@
 .badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.6rem 1rem;
+  gap: 0.8rem;
+  padding: 0.8rem 1.2rem;
   border-radius: 9999px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 500;
   color: white;
+  background-color: var(--default-bg);
 }
 
 .icon {
   display: inline-block;
   object-fit: contain;
   aspect-ratio: 1 / 1;
-  height: 1.2em;
+  height: 7em;
 }

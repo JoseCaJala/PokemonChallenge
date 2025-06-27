@@ -8,7 +8,6 @@ function Badge({ type }) {
         alt={type}
         className={styles.icon}
       />
-      <span>{type}</span>
     </span>
   );
 }

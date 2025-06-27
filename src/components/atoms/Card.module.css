@@ -1,33 +1,49 @@
 .card {
   position: relative;
-  border-radius: 16px;
-  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  padding: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  z-index: 0;
 }
 
 .card::before {
   content: "";
   position: absolute;
-  top: 8px;
-  left: 8px;
-  width: 80px;
-  height: 80px;
-  background-image: url("../../assets/6x3.svg");
-  opacity: 0.2;
+  inset: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  pointer-events: none;
+  
+  background-image: url("/src/assets/6x3.svg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 50% auto;
+  opacity: 0.15;
   z-index: 0;
 }
 
 .card::after {
   content: "";
   position: absolute;
-  bottom: -20px;
-  right: -20px;
-  width: 120px;
-  height: 120px;
-  background-image: url("../../assets/Pokeball.svg");
-  background-size: contain;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  pointer-events: none;
+
+  background-image: url("/src/assets/Pokeball.svg");
   background-repeat: no-repeat;
-  opacity: 0.1;
+  background-position: bottom right;
+  background-size: 30% auto;
+  opacity: 0.08;
   z-index: 0;
+}
+
+.card > * {
+  position: relative;
+  z-index: 2;
 }

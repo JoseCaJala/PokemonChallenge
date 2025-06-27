@@ -1,0 +1,20 @@
+.text-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+.text-subtitle {
+  font-size: 1.1rem;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.text-body {
+  font-size: 1rem;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
