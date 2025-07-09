@@ -2,7 +2,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.8rem;
-  padding: 0.8rem 1.2rem;
+  padding: 0 0.2rem;
   border-radius: 9999px;
   font-size: 1.1rem;
   font-weight: 500;
@@ -14,5 +14,5 @@
   display: inline-block;
   object-fit: contain;
   aspect-ratio: 1 / 1;
-  height: 7em;
+  height: 3em;
 }

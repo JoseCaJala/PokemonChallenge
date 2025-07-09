@@ -7,6 +7,6 @@
 
 .badges {
   display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
+  gap: 0;
+  flex-wrap: nowrap;
 }
