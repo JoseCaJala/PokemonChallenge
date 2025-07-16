@@ -38,6 +38,7 @@ export default function PokemonList() {
   };
 
   const loadPokemons = async () => {
+    if (loading) return;
     setLoading(true);
     try {
       const response = await fetch(nextUrl);
@@ -51,7 +52,12 @@ export default function PokemonList() {
         })
       );
 
-      setPokemons(prev => [...prev, ...detailedPokemons]);
+      setPokemons(prev => {
+        const existinIds = new Set(prev.map(p => p.id));
+        const newUnique = detailedPokemons.filter(p=> !existinIds.has(p.id));
+        return [...prev, ...newUnique];
+      });
+      
     } catch (error) {
       console.error("Failed to load Pokémon:", error);
     } finally {

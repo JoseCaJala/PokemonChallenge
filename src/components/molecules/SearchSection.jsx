@@ -10,7 +10,7 @@ export default function SearchSection({ onSearch, onInputChange, value  }){
           <Input 
             type="text" 
             placeholder="What Pokémon are you looking for?"
-            OnChange={onInputChange}
+            onChange={onInputChange}
             value= {value}
           />
           <SearchButton onClick={onSearch}>
