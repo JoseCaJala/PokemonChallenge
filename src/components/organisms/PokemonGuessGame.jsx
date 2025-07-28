@@ -101,7 +101,7 @@ export default function PokemonGuessGame() {
               <>
                 <ImageGame src={state.pokemon.image} alt="Who's that Pokémon?" revealed={state.revealed} />
                 <GameOptions options={state.options} onSelect={handleGuess} />
-                <Text type="subtitle">{state.message}</Text>
+                <Text type="body">{state.message}</Text>
                 {state.revealed && (
                   <button className={styles.retry} onClick={loadNewGame}>Play Again</button>
                 )}
