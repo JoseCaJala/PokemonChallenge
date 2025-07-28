@@ -1,0 +1,7 @@
+.tabBar {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  border-bottom: 1px solid #444;
+}

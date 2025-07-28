@@ -16,3 +16,8 @@
 .button:hover {
   opacity: 0.9;
 }
+
+.white {
+  background-color: white;
+  color: black;
+}

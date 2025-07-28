@@ -1,0 +1,19 @@
+.tabButton {
+  background: none;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: #ccc;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.active {
+  border-color: #ff5c5c;
+}
+
+.inactive:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+}

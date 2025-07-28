@@ -1,0 +1,28 @@
+.wrapper {
+  position: relative;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  overflow: hidden;
+  color: white;
+}
+
+.pokeball {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 100px;
+  opacity: 0.15;
+}
+
+.dots {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  width: 60px;
+  opacity: 0.1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}

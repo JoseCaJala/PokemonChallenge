@@ -3,6 +3,7 @@ import { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { SearchProvider } from "./components/contexts/SearchContext";
 import WhoisThatPokemon from "./pages/WhoisThatPokemon";
+import DetailPokemon from "./pages/DetailPokemon";
 
 const PokemonList = lazy(() => import("./components/organisms/PokemonList"));
 
@@ -15,7 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<PokemonList />} />
             <Route path="/guessPoke" element={<WhoisThatPokemon />} />
-            {/*<Route path="/" element={<PokemonInfo />} /> */}
+            <Route path="/pokemon/:id" element={<DetailPokemon />} />
           </Routes>
         </Suspense>
       </Layout>
