@@ -1,0 +1,30 @@
+.flag {
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 4px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flag:hover {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+.flag.active {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.flagImage {
+  width: 32px;
+  height: 24px;
+  object-fit: cover;
+  border-radius: 4px;
+}

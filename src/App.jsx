@@ -2,6 +2,7 @@ import Layout from "./components/template/Layout";
 import { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { SearchProvider } from "./components/contexts/SearchContext";
+import WhoisThatPokemon from "./pages/WhoisThatPokemon";
 
 const PokemonList = lazy(() => import("./components/organisms/PokemonList"));
 
@@ -13,8 +14,8 @@ function App() {
         <Suspense fallback={<p style={{ textAlign: "center "}}>Loading your pokemons...</p>}>
           <Routes>
             <Route path="/" element={<PokemonList />} />
-            {/* <Route path="/" element={<whoIsPokemon />} />
-            <Route path="/" element={<PokemonInfo />} /> */}
+            <Route path="/guessPoke" element={<WhoisThatPokemon />} />
+            {/*<Route path="/" element={<PokemonInfo />} /> */}
           </Routes>
         </Suspense>
       </Layout>

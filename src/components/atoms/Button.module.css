@@ -1,0 +1,18 @@
+.button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.primary {
+  background-color: #f75a5a;
+  color: white;
+}
+
+.button:hover {
+  opacity: 0.9;
+}

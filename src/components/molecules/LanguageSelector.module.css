@@ -1,0 +1,25 @@
+.languageSelector {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #f75a5a;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+}
+
+.flagsContainer {
+  display: flex;
+  gap: 0.5rem; /* espacio entre banderas */
+}
+
+.flag {
+  width: 32px;
+  height: 32px;
+}
+
+.text {
+  color: white;
+  margin-left: 1rem;
+  margin-right: 2rem;
+  white-space: nowrap;
+}
