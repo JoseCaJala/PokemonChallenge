@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { Image } from "../atoms/Image";
+import { styles } from "./PokemonSilouette.module.css"
 
 export default function PokemonSilouette({
     pokemonImage,
@@ -6,11 +7,6 @@ export default function PokemonSilouette({
     isRevealed = false,
     onReveal
 }) {
-    const [imageLoaded, setImageLoaded] = useState(false);
-
-    const handleImageLoaded = () => {
-        setImageLoaded(true);
-    };
 
     const handleReveal = () => {
         if (onReveal) {
@@ -19,12 +15,11 @@ export default function PokemonSilouette({
     };
 
     return (
-        <div className={styles.container}>
-            <div className={`${style.imageContainer} ${isRevealed ? styles.revealed : ''}`}>
+        <div className={styles.container} onClick={handleReveal}>
+            <div className={`${styles.imageContainer} ${isRevealed ? styles.revealed : styles.hidden}`}>
                 <Image 
                     src={pokemonImage}
                     alt={isRevealed ? pokemonName : "?"}
-                    onLoad={handleImageLoaded}
                 />
                 {!isRevealed && (
                   <div className={styles.silhouette}>
@@ -32,7 +27,6 @@ export default function PokemonSilouette({
                   </div>
                 )}
             </div>
-
         </div>
     )
 }

@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.imageContainer {
+  position: relative;
+  display: inline-block;
+  transition: filter 0.5s ease-in-out;
+}
+
+
+.imageWrapper img {
+  filter: brightness(0) contrast(1);
+  transition: filter 0.5s ease-in-out;
+}
+
+.revealed img {
+  filter: none;
+}
+
+.silhouette {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.questionMark {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 0 5px black;
+}

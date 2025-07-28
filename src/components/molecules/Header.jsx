@@ -2,7 +2,7 @@ import styles from "./Header.module.css";
 import Text from "../atoms/Text";
 import Image from "../atoms/Image";
 
-export default function Header() {
+export default function Header({ bottomContent = null }) {
   return (
     <header className={styles.header}>
       <div className={styles.topSection}>
@@ -16,6 +16,9 @@ export default function Header() {
           <a href="/generations">Generations</a>
         </nav>
       </div>
+
+      {/* show Addtional content under the topsection */}
+      { bottomContent }
     </header>
   );
 }
