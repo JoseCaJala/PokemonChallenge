@@ -14,14 +14,14 @@ export default function Layout({ children }) {
 
   if (location.pathname === "/") {
     bottomContent = (
-      <SearchSection
+      <LanguageSelector />
+    );
+  } else if (location.pathname === "/pokemons") {
+    bottomContent = <SearchSection
         onSearch={handleSearch}
         onInputChange={handleInputChange}
         value={searchTerm}
-      />
-    );
-  } else if (location.pathname === "/guessPoke") {
-    bottomContent = <LanguageSelector />;
+      />;
   }
 
   return (

@@ -12,7 +12,7 @@ export default function Header({ bottomContent = null }) {
         </div>
         <nav className={styles.nav}>
           <a href="/">Home</a>
-          <a href="/types">Types</a>
+          <a href="/pokemons">Types</a>
           <a href="/generations">Generations</a>
         </nav>
       </div>

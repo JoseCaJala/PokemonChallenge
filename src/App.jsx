@@ -14,8 +14,8 @@ function App() {
       <Layout>
         <Suspense fallback={<p style={{ textAlign: "center "}}>Loading your pokemons...</p>}>
           <Routes>
-            <Route path="/" element={<PokemonList />} />
-            <Route path="/guessPoke" element={<WhoisThatPokemon />} />
+            <Route path="/" element={<WhoisThatPokemon />} />
+            <Route path="/pokemons" element={<PokemonList />} />
             <Route path="/pokemon/:id" element={<DetailPokemon />} />
           </Routes>
         </Suspense>
