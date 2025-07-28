@@ -1,0 +1,100 @@
+.card {
+  background-color: white;
+  border: 2px solid #000;
+  border-radius: 8px;
+  padding: 1.5rem;
+  color: #000;
+  font-family: Arial, sans-serif;
+}
+
+.section {
+  margin-bottom: 1.5rem;
+}
+
+.sectionTitle {
+  color: #4CAF50;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+}
+
+.description {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-weight: 600;
+  color: #333;
+  min-width: 80px;
+  font-size: 0.9rem;
+}
+
+.value {
+  color: #666;
+  text-align: right;
+  flex: 1;
+  font-size: 0.9rem;
+}
+
+.ability {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.ability:last-child {
+  margin-bottom: 0;
+}
+
+.hiddenLabel {
+  color: #999;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  justify-content: flex-end;
+}
+
+/* Stats specific styles */
+.statRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.statRow:last-child {
+  border-bottom: none;
+}
+
+.statName {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+.statValue {
+  color: #666;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
